@@ -6,9 +6,10 @@ include('../php/init.php');
 $uri = $_SERVER['REQUEST_URI'];
 $name = preg_replace('/.*\/redirect\//', '', $uri);
 $name = preg_replace('/\?.*/', '', $name);
+$name = urldecode($name);
 
 if (!$name) {
-    header ("Content-type: text/plain");
+    header ("Content-type: text/plain; charset=UTF-8");
     print "No name in /redirect/... link.";
     exit;
 }
@@ -16,9 +17,17 @@ if (!$name) {
 $entry = $data[$name];
 
 if (!$entry) {
-    header ("Content-type: text/plain");
-    print "No entry for name $name.";
+    header ("Content-type: text/plain; charset=UTF-8");
+    print "No entry for name '$name'.";
     exit;
 }
 
-redirect("$dataPath/$name", $entry['url']);
+$domain = $entry['url'];
+$filename = "$dataPath/$name";
+
+$tdb = new TitleDatabase($filename);
+$rawtitle = $tdb->randomTitle();
+$title = str_replace('%3A', ':', urlencode(str_replace(' ', '_', $rawtitle)));
+
+header("Location: http://$domain/wiki/$title");
+?>

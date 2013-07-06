@@ -2,7 +2,6 @@
 
 // Include config
 include_once ("config.php");
-include_once ("functions.php");
 
 // Allow ZLIB compression of output
 ob_start( 'ob_gzhandler' );
