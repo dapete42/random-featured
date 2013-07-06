@@ -1,0 +1,3 @@
+# Rewrite: redirect/... to redirect.php
+RewriteEngine on
+RewriteRule ^(.*)/redirect/.*$ $1/redirect.php
