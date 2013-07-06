@@ -23,9 +23,9 @@ include_once('../php/init.php');
 foreach ($data as $name => $entry) {
 ?>
                 <tr>
-		     <td><a href="redirect/<?php print $name; ?>"><?php print htmlspecialchars($name); ?></a>
-                     <td><?php print htmlspecialchars($entry['url']); ?>
-                     <td><?php print htmlspecialchars($entry['category']); ?>
+		     <td><a href="redirect/<?php print urlencode($name); ?>"><?php print htmlspecialchars($name); ?></a>
+		     <td><a href="//<?php print $entry['url']; ?>/"><?php print htmlspecialchars($entry['url']); ?></a>
+		     <td><a href="//<?php print $entry['url']; ?>/wiki/Category:<?php print str_replace('%3A',':',urlencode($entry['category'])); ?>"><?php print htmlspecialchars(str_replace('_', ' ', $entry['category'])); ?></a>
                 </tr>
 <?php
 }
