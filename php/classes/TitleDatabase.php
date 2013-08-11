@@ -48,6 +48,17 @@ class TitleDatabase {
     fclose($f);
   }
 
+  public function numberOfTitles() {
+    $f = fopen($this->filename, 'r');
+    $lines = 0;
+    while(!feof($f)) {
+      $line = fgets($f);
+      $lines++;
+    }
+    fclose($f);
+    return $lines;
+  }
+
 }
 
 ?>
