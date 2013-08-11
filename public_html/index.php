@@ -37,6 +37,7 @@ foreach ($data as $name => $entry) {
 }
 ?>
 	    </tbody>
-        </table>
+	</table>
+	<p>Source code is available <a href="https://github.com/dapete42/random-featured" title="GitHub repository dapete42/random-featured">on GitHub</a>.</p>
     </body>
 </html>
