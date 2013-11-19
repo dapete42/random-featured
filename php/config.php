@@ -19,4 +19,8 @@ $data['nowiki-anbefalte'] 	= array('url' => 'no.wikipedia.org', 'category' => 'A
 $data['enwiki'] 		= array('url' => 'en.wikipedia.org', 'category' => 'Wikipedia_featured_articles', 'ns' => 1, 'cut' => 5);
 $data['enwiki-good'] 		= array('url' => 'en.wikipedia.org', 'category' => 'Wikipedia_good_articles', 	'ns' => 1, 'cut' => 5);
 
+// ta.WP has the category on the talk page, "Talk:" has to be cut off
+$data['tawiki'] 		= array('url' => 'ta.wikipedia.org', 'category' => 'முதற்பக்கக் கட்டுரைகள்', 'ns' => 1, 'cut' => 5);
+$data['tawiki-good'] 		= array('url' => 'ta.wikipedia.org', 'category' => 'உங்களுக்குத் தெரியுமா கட்டுரைகள்', 	'ns' => 1, 'cut' => 5);
+
 ?>
