@@ -19,7 +19,7 @@ function filltable ($path, $filename, $domain, $category, $namespace, $cutoff) {
     $titlesOld = $titles;
     $titles = array();
     foreach ($titlesOld as $title) {
-      $titles[] = substr($title,$cutoff);
+      $titles[] = mb_substr($title,$cutoff);
     }
   }
 
