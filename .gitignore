@@ -2,3 +2,4 @@
 *.log
 replica.my.cnf
 !.gitignore
+!.lighttpd.conf
