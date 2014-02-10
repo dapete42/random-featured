@@ -29,5 +29,5 @@ $tdb = new TitleDatabase($filename);
 $rawtitle = $tdb->randomTitle();
 $title = str_replace('%3A', ':', urlencode(str_replace(' ', '_', $rawtitle)));
 
-header("Location: http://$domain/wiki/$title");
+header("Location: //$domain/wiki/$title");
 ?>
