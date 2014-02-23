@@ -51,7 +51,11 @@ foreach ($data as $name => $entry) {
       </div>
     </div>
     <div class="col2">
-      <!--div id="logo">random-<br/>featured</div-->
+      <div id="logo">
+	<a href="//tools.wmflabs.org/">
+          <img src="//tools.wmflabs.org/Tool_Labs_logo_thumb.png" alt="Wikitech and Wikimedia Labs" />
+        </a>
+      </div>
       <strong>Links</strong>
       <ul>
 	<li><a href="https://github.com/dapete42/random-featured" title="GitHub repository dapete42/random-featured">Source code on GitHub</a></li>
