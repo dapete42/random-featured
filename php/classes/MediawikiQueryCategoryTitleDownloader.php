@@ -15,11 +15,13 @@ class MediawikiQueryCategoryTitleDownloader {
   protected $userAgent;
   protected $urlDomain;
   protected $urlPath;
+  protected $useHttps;
 
-  public function __construct($userAgent, $domain = 'en.wikipedia.org', $path = 'w') {
+  public function __construct($userAgent, $domain = 'en.wikipedia.org', $path = 'w', $useHttps = false) {
     $this->userAgent = $userAgent;	      
     $this->urlDomain = $domain;
     $this->urlPath = $path;
+    $this->useHttps = $useHttps;
   }
 
   public function download($category = '', $namespace=0) /* string[] */ {
@@ -27,7 +29,7 @@ class MediawikiQueryCategoryTitleDownloader {
     $from = '';
 
     do {
-      $url = 'http://' . $this->urlDomain . '/' . $this->urlPath . "/api.php?format=php&action=query&list=categorymembers&cmprop=title&cmlimit=500&cmnamespace=$namespace&cmtitle=Category:" . urlencode($category);
+      $url = ($this->useHttps ? 'https' : 'http') . '://' . $this->urlDomain . '/' . $this->urlPath . "/api.php?format=php&action=query&list=categorymembers&cmprop=title&cmlimit=500&cmnamespace=$namespace&cmtitle=Category:" . urlencode($category);
       if ($from !== '') {
         $url .= "&cmcontinue=" . urlencode($from);
       }

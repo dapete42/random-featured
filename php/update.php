@@ -12,7 +12,7 @@ foreach ($data as $name => $entry) {
 function filltable ($path, $filename, $domain, $category, $namespace, $cutoff) {
   global $userAgent;   
 
-  $multi = new MediawikiQueryCategoryTitleDownloader($userAgent, $domain);
+  $multi = new MediawikiQueryCategoryTitleDownloader($userAgent, $domain, 'w', true);
   $titles = $multi->download($category, $namespace);
 
   if ($cutoff) {
