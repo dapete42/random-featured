@@ -1,5 +1,6 @@
 .*
 *.log
 replica.my.cnf
+service.manifest
 !.gitignore
 !.lighttpd.conf
