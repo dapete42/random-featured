@@ -54,8 +54,8 @@ class MediawikiQueryCategoryTitleDownloader {
         }
       }
 
-      if (@$yurik['query-continue']['categorymembers']['cmcontinue']) {
-        $from = $yurik['query-continue']['categorymembers']['cmcontinue'];
+      if (@$yurik['continue']['cmcontinue']) {
+        $from = $yurik['continue']['cmcontinue'];
       }
       else {
         $from = '';
