@@ -17,7 +17,7 @@ $data['nowiki-anbefalte'] 	= array('url' => 'no.wikipedia.org', 'category' => 'A
 
 // en.WP has the category on the talk page, "Talk:" has to be cut off
 $data['enwiki'] 		= array('url' => 'en.wikipedia.org', 'category' => 'Wikipedia_featured_articles', 'ns' => 1, 'cut' => 5, 'displayname' => 'Featured articles (English Wikipedia)');
-$data['enwiki-good'] 		= array('url' => 'en.wikipedia.org', 'category' => 'Wikipedia_good_articles', 	'ns' => 1, 'cut' => 5, 'displayname' => 'Good articlesi (English Wikipedia)');
+$data['enwiki-good'] 		= array('url' => 'en.wikipedia.org', 'category' => 'Wikipedia_good_articles', 	'ns' => 1, 'cut' => 5, 'displayname' => 'Good articles (English Wikipedia)');
 
 // ta.WP has the category on the talk page, the Tamil equivalent of the "Talk:"
 // prefix has to be cut off. It looks like 4 characters plus the ':', but it is
