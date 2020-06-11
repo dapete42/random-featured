@@ -4,7 +4,7 @@
 $dataPath = '/data/project/random-featured/data/';
 
 // User-Agent string to use for HTTP access to Wikipedia
-$userAgent = 'random-featured (Tool Labs; http://tools.wmflabs.org/random-featured/)';
+$userAgent = 'random-featured (Toolforge; https://random-featured.toolforge.org/)';
 
 // de-WP has the category on the article
 $data['dewiki'] 		= array('url' => 'de.wikipedia.org', 'category' => 'Wikipedia:Exzellent', 	'ns' => 0, 'cut' => 0, 'displayname' => 'Exzellente Artikel (Featured articles, German Wikipedia)');
