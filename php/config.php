@@ -25,5 +25,8 @@ $data['enwiki-good'] 		= array('url' => 'en.wikipedia.org', 'category' => 'Wikip
 $data['tawiki'] 		= array('url' => 'ta.wikipedia.org', 'category' => 'முதற்பக்கக்_கட்டுரைகள்', 'ns' => 1, 'cut' => 7, 'displayname' => 'Featured articles (Tamil Wikipedia)');
 $data['tawiki-good'] 		= array('url' => 'ta.wikipedia.org', 'category' => 'உங்களுக்குத்_தெரியுமா_கட்டுரைகள்', 	'ns' => 1, 'cut' => 7, 'displayname' => 'Good articles (Tamil Wikipedia)');
 
+// sv.WP has the category on the article
+$data['svwiki'] 		= array('url' => 'sv.wikipedia.org', 'category' => 'Wikipedia:Utmärkta artiklar', 	'ns' => 0, 'cut' => 0, 'displayname' => 'Utmärkta artiklar (Featured articles, Swedish Wikipedia)');
+$data['svwiki-bra'] 		= array('url' => 'sv.wikipedia.org', 'category' => 'Wikipedia:Bra artiklar', 	'ns' => 0, 'cut' => 0, 'displayname' => 'Bra artiklar (Good articles, Swedish Wikipedia)');
 
 ?>

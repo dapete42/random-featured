@@ -1,0 +1,3 @@
+#!/bin/bash
+
+php /data/project/random-featured/php/update.php >> /data/project/random-featured/update.log 2>&1
