@@ -29,7 +29,7 @@ class MediawikiQueryCategoryTitleDownloader {
     $from = '';
 
     do {
-      $url = ($this->useHttps ? 'https' : 'http') . '://' . $this->urlDomain . '/' . $this->urlPath . "/api.php?format=php&action=query&list=categorymembers&cmprop=title&cmlimit=500&cmnamespace=$namespace&cmtitle=Category:" . urlencode($category);
+      $url = ($this->useHttps ? 'https' : 'http') . '://' . $this->urlDomain . '/' . $this->urlPath . "/api.php?format=json&action=query&list=categorymembers&cmprop=title&cmlimit=500&cmnamespace=$namespace&cmtitle=Category:" . urlencode($category);
       if ($from !== '') {
         $url .= "&cmcontinue=" . urlencode($from);
       }
@@ -44,17 +44,17 @@ class MediawikiQueryCategoryTitleDownloader {
       $data = curl_exec($ch);
       curl_close($ch);
 
-      // Regain the serialized array data
-      $yurik = unserialize($data);
+      // Decode JSON
+      $yurik = json_decode($data, true);
 
-      // Loop through all pages
-      if (count(@$yurik['query']['categorymembers']) > 0) {
+      // Safely check if the expected array keys exist before looping
+      if (isset($yurik['query']['categorymembers']) && is_array($yurik['query']['categorymembers'])) {
         foreach ($yurik['query']['categorymembers'] as $page) {
-          array_push ($titles, $page['title']);
+          array_push($titles, $page['title']);
         }
       }
 
-      if (@$yurik['continue']['cmcontinue']) {
+      if (isset($yurik['continue']['cmcontinue'])) {
         $from = $yurik['continue']['cmcontinue'];
       }
       else {
