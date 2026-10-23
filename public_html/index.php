@@ -6,7 +6,7 @@ include_once('../php/init.php');
 
 <head>
   <meta charset="utf-8" />
-  <link rel="stylesheet" href="//tools.wmflabs.org/style.css" type="text/css" media="screen" />
+  <!--link rel="stylesheet" href="//tools.wmflabs.org/style.css" type="text/css" media="screen" /-->
   <title>random-featured</title>
 </head>
 
@@ -53,7 +53,7 @@ foreach ($data as $name => $entry) {
     <div class="col2">
       <div id="logo">
 	<a href="//tools.wmflabs.org/">
-          <img src="//tools.wmflabs.org/Tool_Labs_logo_thumb.png" alt="Wikitech and Wikimedia Labs" />
+	  <img src="//tools-static.wmflabs.org/toolforge/logos/logo-with-text.png" alt="Toolforge" />
         </a>
       </div>
       <strong>Links</strong>
