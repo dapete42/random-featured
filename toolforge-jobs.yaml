@@ -1,8 +1,11 @@
 # https://wikitech.wikimedia.org/wiki/Help:Toolforge/Jobs_framework
 ---
+- name: webservice
+  image: php8.4
+  webservice: true
 # Run hourly updates
 - name: random-featured-update
-  image: tf-php74
+  image: php8.4
   command: bin/random-featured-update
   no-filelog: true
   schedule: "00 * * * *"

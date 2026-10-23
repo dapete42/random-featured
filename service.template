@@ -1,3 +1,2 @@
 backend: kubernetes
-type: php7.4
-canonical: True
+type: php8.4
